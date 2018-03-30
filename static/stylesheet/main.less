@@ -1,0 +1,169 @@
+// 引入重置样式表
+@import "reset";
+// 引入mixin表
+@import "mixin";
+// 引入功能表
+@import "fuction";
+
+html{
+}
+body {
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+//搜索样式
+.search {
+  background: #42bd56;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  .search-container {
+    .pxtorem(padding, 16);
+    .pxtorem(height, 103-16*2);
+    position: relative;
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      .pxtorem(left, 40);
+      .pxtorem(top, (100-15*2)/2);
+      i {
+        font-size: .5rem;
+      }
+    }
+    .search-qrcode {
+      position: absolute;
+      .pxtorem(right, 140);
+      .pxtorem(top, (100-24*2)/2);
+      a {
+        i {
+          font-size: .6rem;
+        }
+      }
+    }
+    .search-form {
+      .pxtorem(width, 620);
+      height: 100%;
+      float: left;
+      input {
+        width: 100%;
+        height: 100%;
+        background: white;
+        font-size: .4rem;
+        border-radius: 10px;
+        text-indent: 1rem;
+        outline: none;
+      }
+    }
+    .speak {
+      height: 100%;
+      .pxtorem(line-height, 103-16*2);
+      a {
+        color: #ffffff;
+        i {
+          font-size: .6rem;
+        }
+      }
+    }
+  }
+}
+
+// 豆瓣导航
+.douban_nav {
+  background: white;
+  .pxtorem(padding-top, 103);
+  .box-container {
+    .pxtorem(height, 80);
+    .pxtorem(line-height, 80);
+    .pxtorem(padding-left, 44);
+    .pxtorem(padding-right, 44);
+    .box-size-25 {
+      a {
+        display: block;
+        height: 100%;
+      }
+    }
+    .box-size-25:nth-of-type(1) {
+      text-align: right;
+      background: url("../image/Screenshot_2018-03-19-13-15-13_03.jpg") no-repeat left center;
+      background-size: .42666667rem .46666667rem;
+    }
+    .box-size-25:nth-of-type(2) {
+      .pxtorem(text-indent, 60);
+      background: url("../image/Screenshot_2018-03-19-13-15-13_05.jpg") no-repeat .5rem center;
+      background-size: .42666667rem .46666667rem;
+    }
+    .box-size-25:nth-of-type(3) {
+      .pxtorem(text-indent, 30);
+      background: url("../image/Screenshot_2018-03-19-13-15-13_07.jpg") no-repeat .3rem center;
+      background-size: .42666667rem .46666667rem;
+    }
+    .box-size-25:nth-of-type(4) {
+      text-align: right;
+      background: url("../image/Screenshot_2018-03-19-13-15-13_09.jpg") no-repeat left .24666667rem;
+      background-size: .42666667rem .46666667rem;
+    }
+  }
+}
+
+/* 书影音
+-------------------------------------------------------------------------------------------
+ */
+
+.books {
+  //头部
+  .header {
+    position: fixed;
+    width: 100%;
+    background: #ffffff;
+    .pxtorem(height, 183);
+    z-index: 9999;
+    .top {
+      .pxtorem(height, 98);
+      .pxtorem(line-height, 98);
+      border-bottom: 2px solid #e2e2e2;
+      display: flex;
+      a {
+        flex: 1;
+        color: #3fbf56;
+        i {
+          font-size: .6rem;
+        }
+      }
+      span {
+        flex: 5;
+        text-align: center;
+        color: #000000;
+        font-size: .45rem;
+        .pxtorem(text-indent, 180);
+      }
+    }
+    .bottom {
+      .pxtorem(height, 84);
+      .pxtorem(line-height, 84);
+      display: flex;
+      a {
+        flex: 1;
+        span {
+          display: inline-block;
+          height: 100%;
+        }
+      }
+      .active {
+        span {
+          border-bottom: 2px solid #323232;
+        }
+      }
+    }
+  }
+
+  //banner
+  .banner{
+    .pxtorem(margin-top, 184);
+    img{
+      display: block;
+    }
+  }
+}
